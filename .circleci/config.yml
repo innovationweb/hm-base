@@ -29,9 +29,7 @@ jobs:
 
             - run:
                 name: "Install Casper"
-                command: |
-                  sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
-                  sudo npm install -g casperjs
+                command: sudo npm install -g casperjs
 
             # Install memcache
             - run:
@@ -99,7 +97,7 @@ jobs:
             - run:
                 name: "Run Casper"
                 command: |
-                    sleep 5
+                    sleep 10
                     casperjs test .tests/casperjs --url=http://localhost:8080 --log-level=debug
 
             # Teardown
