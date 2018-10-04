@@ -42,8 +42,7 @@ jobs:
             # Install phpcs
             - run:
                 name: "Install phpcs"
-                command: |
-                    mkdir ~/php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C ~/php-codesniffer
+                command: mkdir ~/php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C ~/php-codesniffer
 
             # Install phpunit
             - run:
